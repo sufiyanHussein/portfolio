@@ -15,18 +15,31 @@ navbar.onclick = (e) => {
 document.onclick = () => {
     navbar.classList.remove("active");
 };
+ const seeMoreBtn = document.getElementById("see-more-btn");
+    const hiddenProjects = document.querySelectorAll(".hidden-projects");
 
-const seeMoreBtn = document.querySelector("#see-more-btn");
-const hiddenProjects = document.querySelector(".hidden-projects");
+    seeMoreBtn.addEventListener("click", () => {
+        hiddenProjects.forEach(project => {
+           project.classList.toggle("show");
+        });
 
-seeMoreBtn.onclick = () =>{
+        if (seeMoreBtn.textContent === "See More") {
+            seeMoreBtn.textContent = "See Less";
+        } else {
+            seeMoreBtn.textContent = "See More";
+        }
+    });
 
-    hiddenProjects.classList.toggle("show");
 
-    if(hiddenProjects.classList.contains("show")){
-        seeMoreBtn.innerHTML="See Less";
-    }else{
-        seeMoreBtn.innerHTML="See More";
-    }
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Thanks! Message received (demo).');
+    contactForm.reset();
+  });
 }
