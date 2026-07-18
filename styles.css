@@ -199,13 +199,14 @@ span{
 }
 
 .text-animation{
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 600;
     min-width: 280px;
 }
 
 .text-animation span{
     position: relative;
+    display: inline-block;
 }
 
 .text-animation span::before{
