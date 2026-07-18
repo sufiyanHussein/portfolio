@@ -78,7 +78,8 @@ body {
 
 section{
     min-height: 100vh;
-    padding: 10rem 12% 10rem;
+    padding: 5rem 12% 5rem;
+    
 }
 .home{
     display: flex;
@@ -737,13 +738,7 @@ span{
     .timeline-dot{
         left: 0;
     }
-
-    .skills-container {
-        grid-template-columns: 1fr !important; 
-        margin: 0 !important;
-        gap: 2rem;
-    }
-    
+ 
     .skill-box {
         min-height: auto; 
     }
@@ -792,8 +787,6 @@ span{
     display: block;
 }
 
-
-
 .home{
     flex-direction: column-reverse;
     gap:3rem;
@@ -811,7 +804,7 @@ span{
     }
     
     .home-img img {
-        width: 65vw; /* Makes your avatar image a sensible size on mobile */
+        width: 65vw; 
         max-width: 280px;
         margin-top: 2rem;
     }
@@ -827,11 +820,11 @@ span{
     }
     
     .social-icons a {
-        margin: 2rem 0.8rem; /* Cleans up icon spacing */
+        margin: 2rem 0.8rem;
     }
 
 .projects-container{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
 }
  .contact form {
         width: 100%;
@@ -863,7 +856,7 @@ span{
     }
 
     section{
-        padding:9rem 5% 5rem;
+        padding:5rem 5% 3rem;
     }
 
     .logo{
@@ -925,13 +918,16 @@ span{
     }
 
     .btn{
-        width:100%;
+        width:40%;
         text-align:center;
+    }
+    .input-group-2{
+      width:100%;  
     }
 
     .projects-container,
     .skills-container{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr;
     }
 
     .timeline-content{
