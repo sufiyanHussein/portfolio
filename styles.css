@@ -16,6 +16,10 @@
     --second-main-color:#080808;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 body {
     background: var(--bg-color);
     color: var(--text-color);
@@ -712,10 +716,7 @@ span{
     .timeline-items::before {
         left: 7px;
     }
-
-
-
-
+    
     .timeline-item:nth-child(odd){
         padding-right: 0;
         text-align: left;
@@ -728,6 +729,20 @@ span{
 
     .timeline-dot{
         left: 0;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr !important; 
+        margin: 0 !important;
+        gap: 2rem;
+    }
+    
+    .skill-box {
+        min-height: auto; 
+    }
+
+    .skill-box .skill-info {
+        padding: 3rem 2rem; 
     }
     
     .contact form{
@@ -776,9 +791,44 @@ span{
     flex-direction: column-reverse;
 }
 
+.home-content {
+        align-items: center; 
+        text-align: left;
+        
+    }
+
+    
+    .home-content h1 {
+        font-size: 4rem;
+    }
+    
+    .home-img img {
+        width: 65vw; /* Makes your avatar image a sensible size on mobile */
+        max-width: 280px;
+        margin-top: 2rem;
+    }
+    
+    .btn-group {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .social-icons {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .social-icons a {
+        margin: 2rem 0.8rem; /* Cleans up icon spacing */
+    }
+
 .projects-container{
     grid-template-columns: 1fr;
 }
+ .contact form {
+        width: 100%;
+        padding: 0 5%;
+    }
 }
 
 @media(max-width:768px){
